@@ -1,0 +1,33 @@
+spring.application.name: betterread-data-loader
+
+datadump.location:
+  author: G:/TutorialsAndPOC/SpringBootCassesndraDB/Datadump/ol_dump_authors_2022-03-29.txt
+  works: G:/TutorialsAndPOC/SpringBootCassesndraDB/Datadump/ol_dump_works_2022-03-29.txt
+
+
+
+spring:
+  data:
+    cassandra:
+      keyspace-name: main
+      username: wiaXSPjpglmZtPzFDdkiyDkT
+      password: DSjFhb3CH+KFrum750m0sYG2GHgbyJKFMuco1DqiAPXM2d0T5Ev5hUzHtlFJz2Q1,NU6wqK_mWSYYxN89LLz+xzocb,Mfm3cmGcNjdeUjByw6uiY+T15woqtHNFTNRnL
+      schema-action: create-if-not-exists
+      request:
+        timeout: 10s
+      connection:
+        connect-timeout: 10s
+        init-query-timeout: 10s
+
+
+  main:
+    allow-circular-references: true
+
+datastax.astra:
+  secure-connect-bundle: secure-connect.zip
+
+astra.db:
+  id: bfc5353a-2065-49d6-9420-04c3f0cd565c
+  region: asia-south1
+  keyspace: main
+  application.token: AstraCS:wiaXSPjpglmZtPzFDdkiyDkT:bb246997e64c92711f017e0a02c45f02dedf70c3a9aa0baa1cf29b6132cc9819
